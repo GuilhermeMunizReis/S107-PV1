@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from calc import *
+from src.calc import *
 
 class TestCalculadora(unittest.TestCase):
     

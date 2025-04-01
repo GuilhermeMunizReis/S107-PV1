@@ -24,6 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
   build:
     needs: test
@@ -69,8 +70,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
-        pip install xmlrunner
+        pip install -r requirements.txt
 
     - name: Run tests and generate XML report using relatorio.py
       run: |
