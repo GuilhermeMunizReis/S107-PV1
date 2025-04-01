@@ -1,7 +1,12 @@
 import unittest
 from unittest.mock import patch
+import xmlrunner
 
-from src.calc import *
+import sys
+
+sys.path.append('src')
+
+from calc import *
 
 class TestCalculadora(unittest.TestCase):
     
@@ -57,4 +62,5 @@ class TestCalculadora(unittest.TestCase):
         self.assertNotEqual(c.potencia(4, 3), 64.00001)
         
 if __name__ == '__main__':  
-    unittest.main()
+    with open('test-reports/results.xml', 'wb') as output:
+        unittest.main(testRunner=xmlrunner.XMLTestRunner(output=output), exit=False)
