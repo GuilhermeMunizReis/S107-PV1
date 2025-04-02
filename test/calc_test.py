@@ -6,7 +6,7 @@ import sys
 
 sys.path.append('src')
 
-from src.calc import *
+from calc import *
 
 class TestCalculadora(unittest.TestCase):
     
