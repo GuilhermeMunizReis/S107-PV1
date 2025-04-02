@@ -65,3 +65,18 @@ jobs:
       with:
         name: my_python_executable
         path: dist/main
+
+  notification:
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Enviar relatório por e-mail
+      env:
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        EMAIL_TO: "destinatario@exemplo.com"
+      run: python send_email.p
