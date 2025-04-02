@@ -82,7 +82,7 @@ jobs:
           python-version: '3.10'
 
       - name: Ajustar permissões do script
-        run: chmod +x send_email.py
+        run: chmod +x email_script.py
         
       - name: Install dependencies
         run: |
