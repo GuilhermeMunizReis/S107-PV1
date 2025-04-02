@@ -79,4 +79,4 @@ jobs:
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         EMAIL_TO: "destinatario@exemplo.com"
-      run: python send_email.p
+      run: python email_script.py
