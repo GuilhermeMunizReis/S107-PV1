@@ -78,5 +78,5 @@ jobs:
         SMTP_PORT: ${{ secrets.SMTP_PORT }}
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-        EMAIL_TO: "destinatario@exemplo.com"
+        EMAIL_TO: "guilhermemuniz1001@gmail.com"
       run: python email_script.py
