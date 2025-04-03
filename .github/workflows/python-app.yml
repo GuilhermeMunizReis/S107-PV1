@@ -76,4 +76,6 @@ jobs:
     - name: Enviar relatório por e-mail
       env:
         EMAIL_TO: ${{ secrets.EMAIL_TO }}
-      run: sh email_script.sh
+      run: |
+        ls
+        sh email_script.sh
