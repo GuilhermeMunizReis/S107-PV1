@@ -73,9 +73,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Enviar relatório por e-mail
-      env:
-        EMAIL_TO: ${{ secrets.EMAIL_TO }}
-      run: |
-        ls -la
-        sh email_script.sh
+      - uses: actions/checkout@v4
+      
+      - name: Enviar relatório por e-mail
+        env:
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: sh scripts/email_script.sh
