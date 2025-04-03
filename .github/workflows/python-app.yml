@@ -65,7 +65,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: my_python_executable
-        path: dist/main.exe
+        path: dist/main
 
   notification:
     needs: test
