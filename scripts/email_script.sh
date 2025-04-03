@@ -1,7 +1,7 @@
 echo "Enviando o e-mail"
 
 sudo apt-get install mailutils
-mail -s "Testes executados com sucesso" $EMAIL_TO
+mail -s "Testes executados com sucesso" guilhermemuniz1001@gmail.com
 
 # Verifica se o e-mail foi enviado com sucesso
 if [ $? -eq 0 ]; then
